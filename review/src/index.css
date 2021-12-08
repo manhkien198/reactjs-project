@@ -11,3 +11,98 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body{
+  background-color: #f1f5f8;
+}
+.heading {
+  margin-bottom: 100px;
+}
+.title{
+  text-align: center;
+  position: relative;
+}
+.underline{
+  height:2px;
+  background-color: #49a6e9;
+  width:50px;
+  position:absolute;
+  left:48.5%;
+  top: 80px
+}
+.quote-icon {
+  color: #fff;
+  background-color: #70bcf1;
+  padding:10px;
+  border-radius:50%;
+  position:absolute;
+  top: 170px;
+  left: 46%;
+}
+
+.avatar{
+  width:150px;
+  height:150px;
+  border-radius: 50%;
+  margin-left: 38%;
+  object-fit: cover;
+  position: relative;
+}
+.img-container::before{
+  content: '';
+  width:9.5%;
+  height:25%;
+  background-color: hsl(205, 82%, 68%);
+  position: absolute;
+  top: 160px;
+  right: 45%;
+  border-radius: 50%;
+}
+article{
+  max-width: 620px;
+  margin:auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 5px 5px 10px 4px rgb(155, 150, 150,0.6);
+}
+h2{
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing:2px;
+  text-align: center;
+  margin-bottom: 0;
+}
+h3{
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  color: #49a6e9;
+  font-weight: normal;
+}
+p{
+  text-align: center;
+  opacity:0.6
+}
+button{
+  border:none;
+  background-color: #fff;
+  color:#8bcbf9;
+  font-size: 20px;
+}
+button:hover{
+  color: #49a6e9;
+}
+.next-prev-btn{
+  margin-left: 45%;
+}
+.random-btn{
+  margin-left: 40%;
+  margin-top: 20px;
+  background-color: #a9d6f7;
+  color:#49a6e9;
+  border-radius:4px
+}
+.random-btn:hover{
+  background-color: #49a6e9;
+  color: #333
+}
