@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import people from './data'
-import {FaChevronLeft,FaChevronRight} from 'react-icons/fa'
 const Review=()=>{
     const [index,setIndex]= useState(0)
     const {id,name,job,image,text}= people[index]
