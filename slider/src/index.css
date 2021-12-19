@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f1f5f8;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+section{
+  max-width: 800px;
+  margin: 100px auto;
+  text-align: center;
+}
+span{
+  color:#ba5d2c;
+  margin-right: 5px;
+}
+.title{
+  font-size: 25px;
+  margin-bottom: 60px;
+}
+img{
+  width: 142px;
+  height: 142px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+}
+article{
+position:absolute;
+top: 200px;
+left:33%;
+opacity: 0;
+transition: all .3s ease-out;
+}
+h4{
+  text-transform: uppercase;
+  color:#ba5d2c
+}
+p{
+  text-transform: capitalize;
+  width:600px;
+  margin: 20px auto;
+}
+.quote{
+  opacity: 0.7;
+}
+.prev,.next{
+  position:absolute;
+  top:380px;
+  left:70%;
+  background:#617d98;
+  color: #fff;
+  border-radius: 4px;
+  width:36px;
+  height: 36px;
+  border:none;
+  font-size: 20px;
+  transition: .5s;
+}
+.prev:hover,.next:hover{
+  background: #ba5d2c;
+}
+.prev{
+  left:unset;
+  left:30%
+}
+article.activeSlide{
+  opacity: 1;
+  transform:translateX(0)
+}
+article.nextSlide{
+  transform:translateX(100%)
+}
+article.lastSlide{
+  transform:translateX(-100%)
+}
+i.icon{
+  color:#ba5d2c;
+  font-size: 25px;
+}
