@@ -227,6 +227,7 @@ const Sidebar = () => {
   const indexOfLastProd = currPage * prodPerPage;
   const indexOfFirstProd = indexOfLastProd - prodPerPage;
   const currenProd = products.slice(indexOfFirstProd, indexOfLastProd);
+  const filterProd = dataFilter.slice(indexOfFirstProd, indexOfLastProd);
   return (
     <main>
       <aside className="sidebar">
@@ -374,7 +375,7 @@ const Sidebar = () => {
           <section className="product-grid-row" id="products">
             {isFilter &&
               isRow &&
-              dataFilter?.map((product, i) => {
+              filterProd?.map((product, i) => {
                 const { id, name, price, image, colors, description } = product;
                 return (
                   <article key={i} className="product__row">
@@ -435,7 +436,7 @@ const Sidebar = () => {
           <section className="productslist" id="products">
             {isFilter &&
               !isRow &&
-              dataFilter?.map((product, i) => {
+              filterProd?.map((product, i) => {
                 const { id, name, price, image, colors, description } = product;
                 return (
                   <article key={i} className="product">
