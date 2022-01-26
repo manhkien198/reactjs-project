@@ -42,7 +42,7 @@ function App() {
     setAlert({ show, msg, type });
   };
   const clearList = () => {
-    setAlert(true, "danger", "Empty list");
+    showAlert(true, "danger", "Empty list");
     setList([]);
   };
   const removeItem = (id) => {
@@ -62,7 +62,7 @@ function App() {
   return (
     <section className="container">
       <form onSubmit={handleSubmit}>
-        {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
+        {alert.show && <Alert {...alert} showAlert={showAlert} list={list} />}
         <h3>Grocery-Bud</h3>
         <div className="form-control">
           <input
