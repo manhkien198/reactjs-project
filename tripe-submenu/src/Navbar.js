@@ -5,14 +5,14 @@ import { useGlobalContext } from "./Context";
 const Navbar = () => {
   const { openSubmenu, closeSubmenu } = useGlobalContext();
   const displaySubmenu = (e) => {
-    const page = e.target.textContent;
+    const text = e.target.textContent;
     const tempBtn = e.target.getBoundingClientRect();
     const center = (tempBtn.left + tempBtn.right) / 2;
     const bottom = tempBtn.bottom - 3;
-    openSubmenu = (page, { center, bottom });
+    openSubmenu(text, { center, bottom });
   };
   const handleSubmenu = (e) => {
-    if (!e.target.classList.contains("links-btn")) {
+    if (!e.target.classList.contains("link-btn")) {
       closeSubmenu();
     }
   };
@@ -21,22 +21,22 @@ const Navbar = () => {
     <nav className="nav" onMouseOver={handleSubmenu}>
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" className="nav-logo" />
         </div>
         <ul className="nav-links">
           <li>
-            <button className="links-btn" onMouseOver={displaySubmenu}>
-              Products
+            <button className="link-btn" onMouseOver={displaySubmenu}>
+              products
             </button>
           </li>
           <li>
-            <button className="links-btn" onMouseOver={displaySubmenu}>
-              Developers
+            <button className="link-btn" onMouseOver={displaySubmenu}>
+              developers
             </button>
           </li>
           <li>
-            <button className="links-btn" onMouseOver={displaySubmenu}>
-              Company
+            <button className="link-btn" onMouseOver={displaySubmenu}>
+              company
             </button>
           </li>
         </ul>

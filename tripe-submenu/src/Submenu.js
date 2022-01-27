@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "./Context";
-
 const Submenu = () => {
   const {
     isSubmenuOpen,
@@ -12,8 +11,9 @@ const Submenu = () => {
   useEffect(() => {
     setColumn("col-2");
     const { center, bottom } = location;
+    console.log(location);
     const submenu = container.current;
-    submenu.style.left = `${center}px;`;
+    submenu.style.left = `${center}px`;
     submenu.style.top = `${bottom}px`;
     if (links.length === 3) {
       setColumn("col-3");

@@ -63,7 +63,7 @@ function App() {
     <section className="container">
       <form onSubmit={handleSubmit}>
         {alert.show && <Alert {...alert} showAlert={showAlert} list={list} />}
-        <h3>Grocery-Bud</h3>
+        <h3>Tu-đu-nít</h3>
         <div className="form-control">
           <input
             placeholder="tu đu nít"

@@ -5,9 +5,10 @@ const AppProvider = ({ children }) => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [page, setPage] = useState({ page: "", links: [] });
   const [location, setLocation] = useState({});
+
   const openSubmenu = (text, coordinate) => {
     const page = sublinks.find((link) => link.page === text);
-    setPage(text);
+    setPage(page);
     setLocation(coordinate);
     setIsSubmenuOpen(true);
   };
@@ -17,7 +18,13 @@ const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ isSubmenuOpen, openSubmenu, closeSubmenu, location, page }}
+      value={{
+        isSubmenuOpen,
+        openSubmenu,
+        closeSubmenu,
+        location,
+        page,
+      }}
     >
       {children}
     </AppContext.Provider>
